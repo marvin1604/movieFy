@@ -5,16 +5,38 @@
 }
 html{
     font-family: 'Dosis', sans-serif;
-    font-family: 'Red Hat Display', sans-serif; 
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 62.5%;
 }
 body{
     /*ocultamos otod lo que sobre sale en el eje x*/
     background-color: rgb(29, 29, 29);
 }
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+.bars{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: rgb(242, 241, 239);
+}
 
+/*carrusel principal*/
 .carrusel{
+    margin-top: 20px;
     width: 100%;
-    max-width: 120em;
+    max-width: 120rem;
     overflow-x: hidden ;
     display: flex;
     flex-direction: column;
@@ -33,9 +55,9 @@ body{
     transform: translateX(10%);
 }
 .carrusel .img{
-    width: calc(100% / 4 - 1em);
+    width: calc(100% / 4 - 1rem);
     max-width: 400px;
-    margin: 1em;
+    margin: 1rem;
     background-color: green;
     height: 50vh;
     border-radius: 20px;
@@ -66,4 +88,129 @@ body{
 
 .carrusel .punto.activo{
     background-color: orange;
+}
+
+/*search*/
+.search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
+.input-text{
+    width: 250px;
+    height: 30px;
+    margin-top: 12px;
+    border-radius:10px 0 0 10px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(9, 12, 90);
+    color: white;
+}
+.search button{
+    margin-top: 12px;
+    width: 40px;
+    height: 30px;
+    border-radius:0 10px 10px 0;
+    border: none;
+    color: white;
+    background-color: rgb(12, 15, 109);
+}
+/*menu de categorias*/
+
+.lista{
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.lista button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* carrusel tendencia*/
+.tendencias{
+    margin-top: 18px;
+    overflow-x: hidden;
+}
+.tendencias .titulo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 18px;
+    color: white;
+}
+.tendencias .titulo button{
+    background: rgb(12, 15, 109);
+    border: none;
+    width: 80px;
+    border-radius: 10px;
+    color: white;
+}
+
+.container-imagenes{
+    width: 200%;
+    transition: all .5s ease;
+    margin: 12px ;
+    display: flex;
+}
+.container-imagenes img{
+    width: calc(100% / 4 - 24px);
+    border-radius: 20px;
+    margin: 0 8px;
+}
+.container-buttons button{    
+    font-size: 2.8rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.container-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 12px;
+}
+
+
+
+/* footer*/
+footer{
+    margin-top: 100px;
+    padding: 20px;
+    color: rgb(5, 0, 0);
+    background: gainsboro;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+footer .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+footer #buttons-footer{
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+#buttons-footer a{
+    text-decoration: none;
+    font-size: 3.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 51, 51);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+#buttons-footer a:hover{
+    transform: scale(1.2);
 }
