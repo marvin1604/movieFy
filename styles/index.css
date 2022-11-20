@@ -12,18 +12,43 @@ body{
     /*ocultamos otod lo que sobre sale en el eje x*/
     background-color: rgb(29, 29, 29);
 }
+h1{
+    /* font-size:3.8rem; */
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1.4rem;
+}
 header{
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     font-size: 1.8rem;
     color: white;
 }
+
 .bars{
     position: absolute;
-    left: 10px;
+    right: 10px;
     top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: rgb(242, 241, 239);
+}
+.back{
+    right: 10px;
+    position: absolute;
+    left: 10px;
     width: 30px;
     height: 30px;
     font-size: 2rem;
@@ -122,7 +147,8 @@ header{
     margin-top: 18px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    /* background: skyblue; */
 }
 .lista button{
     background-color: rgb(255, 255, 255);
@@ -131,7 +157,30 @@ header{
     height: 30px;
     border-radius: 12px;
     font-weight: bold;
+    margin: 8px;
 }
+.lista .mas-categories{
+    width: 120px;
+    background: rgb(249, 182, 10);
+    text-transform: capitalize;
+    color: white;
+}
+
+/* #categorias{
+    margin: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+
+#categorias button{
+    background: rgb(8, 240, 151);
+    margin-right: 6px;
+    padding: 8px 4px;
+    color: white;
+    width: 100px;
+}
+
 
 /* carrusel tendencia*/
 .tendencias{
@@ -176,6 +225,44 @@ header{
     margin: 0 12px;
 }
 
+#pageMovie{
+    background: purple;
+}
+.containerInfo{
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 16px;
+
+}
+.containerInfoTop{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.containerInfoTop h3{
+    margin: 12px;
+}
+.containerInfo p{
+    margin: 12px;
+}
+.tiposCategorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.peliculasSimilares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.peliculasSimilares img{
+    width: 140px;
+    margin: 8px;
+}
 
 
 /* footer*/
@@ -213,4 +300,8 @@ footer #buttons-footer{
 }
 #buttons-footer a:hover{
     transform: scale(1.2);
+}
+
+.inactive{
+    display: none;
 }

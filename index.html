@@ -12,9 +12,10 @@
     <title>movieFy</title>
 </head>
 <body>
-    <header>
+    <header id="header">
+        <button class="back inactive"><i class="fa-solid fa-arrow-left"></i></button>
+        <h1 id="title">MovieFy</h1>
         <button class="bars"><i class="fa-solid fa-bars"></i></button>
-        <h1>MovieFy :)</h1>        
     </header>
     
     <section id="showcarrusel">
@@ -29,21 +30,22 @@
         </div>
     </section>
 
-    <section class="search">
+    <section id="search" class="search">
             <input type="text" placeholder="Ingresa tu pelicula a buscar" class="input-text">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </section>
-    <section class="lista">
-        <button>Home</button>
+    <section id="lista-categorias" class="lista">        
         <button>TvShows</button>
         <button>Movies</button>
         <button>Series </button>
+        <button class="mas-categories">más categorias <i class="fa-solid fa-angle-down"></i></button>
+        <div id="categorias" class="inactive"></div>
     </section>
 
-    <section class="tendencias">
+    <section id="tendenciasMovies" class="tendencias">
         <div class="titulo">
-            <h2>Tendencias</h2>
+            <h2>Tendencias Movies</h2>
             <button>Ver más</button>
         </div>
         <div class="container-buttons">
@@ -55,27 +57,43 @@
         </div>
     </section>
 
-    <section class="lista">
-        <button>Action</button>
-        <button>Adventure</button>
-        <button>Animation</button>
-        <button>Comedy</button>
-    </section>
-
-    <section class="tendencias">
+    <section id="tendenciasTv" class="tendencias">
         <div class="titulo">
-            <h2>Tendencias</h2>
+            <h2>Tendencias Tv</h2>
             <button>Ver más</button>
         </div>
         <div class="container-buttons">
-            <button class="anterior"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="siguiente"><i class="fa-solid fa-angle-right"></i></button>
+            <button class="anterior anterior-tv"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="siguiente siguiente-tv"><i class="fa-solid fa-angle-right"></i></button>
         </div>
-        <div class="container-imagenes">
-            <img src="data:image/jpeg;base64,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" alt="">
-            <img src="https://www.carlosvillarin.com/wp-content/uploads/cartel-jurassic-world-1-carlos-villarin-freelance.jpg" alt="">
-            <img src="https://ep00.epimg.net/elpais/imagenes/2017/12/13/album/1513166327_044213_1513268843_album_normal.jpg" alt="">
-            <img src="https://i.blogs.es/df746f/espinof-peores-posters-de-cine-2018-venom/450_1000.jpg" alt="">
+        <div class="container-imagenes container-imagenes-tv">
+            
+        </div>
+    </section>
+
+    <section id="pageTrends">
+        <h2>titulo</h2>
+
+    </section>
+
+    <section id="pageMovie">
+        
+        <div class="containerInfo">
+            
+            <div class="containerInfoTop">
+                <h3>Deadpool</h3>
+                <p>7.6</p>
+            </div>
+            <p>LA mejor peliculas de accion blabla bla</p>
+            <div class="tiposCategorias">
+                <p>Romance</p>
+                <p>accion</p>
+            </div>
+            <div class="peliculasSimilares">
+                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt="">
+                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt="">
+                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt=""> 
+            </div>
         </div>
     </section>
 
@@ -94,8 +112,9 @@
         
 
     </footer>
-
+    <script src="./src/nodo.js"></script>
     <script src="./src/secret.js"></script>
     <script src="./src/main.js"></script>
+    <script src="./src/navigation.js"></script>
 </body>
 </html>
