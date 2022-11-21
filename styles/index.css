@@ -7,10 +7,13 @@ html{
     font-family: 'Dosis', sans-serif;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 62.5%;
+    margin: 4px;
 }
 body{
     /*ocultamos otod lo que sobre sale en el eje x*/
     background-color: rgb(29, 29, 29);
+    width: 100%;
+    box-sizing: border-box;
 }
 h1{
     /* font-size:3.8rem; */
@@ -59,6 +62,7 @@ header{
 
 /*carrusel principal*/
 .carrusel{
+    /* max-width: 1000px; */
     margin-top: 20px;
     width: 100%;
     max-width: 120rem;
@@ -117,6 +121,7 @@ header{
 
 /*search*/
 .search{
+    /* max-width: 1000px; */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -144,6 +149,7 @@ header{
 /*menu de categorias*/
 
 .lista{
+    /* max-width: 1000px; */
     margin-top: 18px;
     display: flex;
     flex-wrap: wrap;
@@ -184,6 +190,7 @@ header{
 
 /* carrusel tendencia*/
 .tendencias{
+    /* max-width: 1200px; */
     margin-top: 18px;
     overflow-x: hidden;
 }
@@ -227,8 +234,14 @@ header{
 
 #pageMovie{
     background: purple;
+    position: relative;
+}
+.background{
+    width: 100%;
 }
 .containerInfo{
+    position: absolute;
+    top: 350px;
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -267,6 +280,7 @@ header{
 
 /* footer*/
 footer{
+    width: 100%;
     margin-top: 100px;
     padding: 20px;
     color: rgb(5, 0, 0);
@@ -281,6 +295,7 @@ footer .container{
     align-items: center;
 }
 footer #buttons-footer{
+    width: 100%;
     min-width: 300px;
     display: flex;
     justify-content: center;
@@ -304,4 +319,19 @@ footer #buttons-footer{
 
 .inactive{
     display: none;
+}
+
+@media(min-width:600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        max-width: 1000px;
+    }
+    .bars{
+        display: none;
+    }
 }

@@ -32,13 +32,22 @@ const tendenciasMovie = document.querySelector("#tendenciasMovie");
 const containerImagenes = document.querySelector(".container-imagenes");
 const anterior = document.querySelector(".anterior")
 const siguiente = document.querySelector(".siguiente");
-
+const mastendencias = document.querySelector(".mastendencias");
 /*tendencias tv*/
 const tendenciasTv = document.querySelector("#tendenciasTv");
 const anteriorTv = document.querySelector(".anterior-tv")
 const siguienteTv = document.querySelector(".siguiente-tv");
 const containerImagenesTv = document.querySelector(".container-imagenes-tv");
-
+const mastendenciasTv = document.querySelector(".mastendenciasTv");
 /* pageMovie*/
+const pageMovie= document.querySelector("#pageMovie");
+const backgroud= document.querySelector(".background");
 
-const pageMovie= document.querySelector("#pageMovie")
+/* pageTrends*/
+const pageTrends= document.querySelector("#pageTrends");
+
+/* pageCategory*/
+const pageCategory= document.querySelector("#category");
+
+/* pageSearch*/
+// const pageSearch= document.querySelector("#pageMovie");

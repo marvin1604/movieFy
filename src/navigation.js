@@ -1,4 +1,17 @@
-console.log("navegando")
+console.log("navegando");
+
+mastendencias.addEventListener("click", ()=> {
+    location.hash = "#trends";
+})
+mastendenciasTv.addEventListener("click", ()=> {
+    location.hash = "#trends";
+})
+
+back.addEventListener("click", ()=> {
+    location.hash = "#home";
+})
+
+
 window.addEventListener("load", navigation, false);
 window.addEventListener("hashchange", navigation, false);
 
@@ -28,6 +41,9 @@ function homePage(){
     tendenciasMovies.classList.remove("inactive");
     tendenciasTv.classList.remove("inactive");
     pageMovie.classList.add("inactive")
+    pageCategory.classList.add("inactive");
+    pageTrends.classList.add("inactive");
+    back.classList.add("inactive")
     getTendenciaMoviesPreview();
     getTendencyCarruselPreview();
     getCategory();
@@ -43,7 +59,9 @@ function trend(){
     listaCategorias.classList.add("inactive");
     tendenciasMovies.classList.add("inactive");
     tendenciasTv.classList.add("inactive");
-    
+    pageCategory.classList.add("inactive");
+    pageMovie.classList.add("inactive");
+    pageTrends.classList.remove("inactive")
 
 }
 
@@ -56,14 +74,14 @@ function category(){
     listaCategorias.classList.add("inactive");
     tendenciasMovies.classList.add("inactive");
     tendenciasTv.classList.add("inactive");
+    pageMovie.classList.add("inactive");
+    pageCategory.classList.remove("inactive");
+    pageTrends.classList.add("inactive");
 }
 
 function movie(){
     console.log("Movie");
-    const imagen = document.createElement("img");
-    imagen.src = "https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg";
-    imagen.style="width:250px";
-    pageMovie.appendChild(imagen);
+    backgroud.setAttribute("src", "https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg");
     pageMovie.classList.remove("inactive");
     bars.classList.add("inactive");
     back.classList.remove("inactive");
@@ -72,5 +90,7 @@ function movie(){
     listaCategorias.classList.add("inactive");
     tendenciasMovies.classList.add("inactive");
     tendenciasTv.classList.add("inactive");
+    pageCategory.classList.add("inactive");
+    pageTrends.classList.add("inactive");
 }
 

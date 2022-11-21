@@ -69,16 +69,13 @@ function desactivarCategories(){
         categorias.classList.add("inactive");
         mascategories.innerText= "más categorias"
     }
-
 }
-
-
 
 //carrusel inicio
 punto.forEach((cadapunto, i) =>{
     punto[i].addEventListener("click", () =>{
         let posicion = i;
-        let operacion = (posicion * -25)+35;
+        let operacion = (posicion * -25)+38;
 
         grande.style.transform = `translateX(${operacion}%)`
         punto.forEach((cadapunto, i) =>{
