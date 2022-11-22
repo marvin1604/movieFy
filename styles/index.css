@@ -339,6 +339,7 @@ footer #buttons-footer{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 1000px;
 }
 
 @media(min-width:600px){
