@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 62.5%;
+    margin: 4px;
+    text-decoration: none;
+}
+body{
+    /*ocultamos otod lo que sobre sale en el eje x*/
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    box-sizing: border-box;
+}
+h1{
+    font-size:3.8rem;
+    color: white;
+}
+h2{
+    font-size: 2.4rem;
+    color: white;
+    margin: 8px;
+}
+h3{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background: rgb(8, 240, 151);
+    margin: 6px;
+    padding: 8px 4px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.bars{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: rgb(242, 241, 239);
+}
+.back{
+    right: 10px;
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: rgb(242, 241, 239);
+}
+
+/*carrusel principal*/
+.carrusel{
+    /* max-width: 1000px; */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 120rem;
+    overflow-x: hidden ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.carrusel .grande{
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: all .5s ease;
+    transform: translateX(10%);
+}
+.carrusel .img{
+    width: calc(100% / 4 - 1rem);
+    max-width: 400px;
+    margin: 1rem;
+    background-color: green;
+    height: 50vh;
+    border-radius: 20px;
+    filter: brightness(70%);
+}
+.carrusel .puntos{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 20px;
+    padding: .4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrusel li{
+    list-style: none;
+}
+.carrusel .punto{
+    list-style: none;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(133, 127, 127);
+    border-radius: 50%;
+    margin: 1em;
+}
+
+.carrusel .punto.activo{
+    background-color: orange;
+}
+
+/*search*/
+.search{
+    /* max-width: 1000px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
+.input-text{
+    width: 250px;
+    height: 30px;
+    margin-top: 12px;
+    border-radius:10px 0 0 10px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(9, 12, 90);
+    color: white;
+}
+.search button{
+    margin-top: 12px;
+    width: 40px;
+    height: 30px;
+    border-radius:0 10px 10px 0;
+    border: none;
+    color: white;
+    background-color: rgb(12, 15, 109);
+}
+/*menu de categorias*/
+
+.lista{
+    /* max-width: 1000px; */
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background: skyblue; */
+}
+.lista button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 8px;
+    color: rgb(5, 71, 46);
+}
+.lista .mas-categories{
+    width: 130px;
+    background: rgb(249, 182, 10);
+    text-transform: capitalize;
+    color: white;
+}
+
+
+#categorias button{
+    background: rgb(8, 240, 151);
+    margin-right: 6px;
+    padding: 8px 4px;
+    color: white;
+    width: 100px;
+}
+
+
+/* carrusel tendencia*/
+.tendencias{
+    /* max-width: 1200px; */
+    margin-top: 18px;
+    overflow-x: hidden;
+}
+.tendencias .titulo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 18px;
+    color: white;
+}
+.tendencias .titulo button{
+    background: rgb(12, 15, 109);
+    border: none;
+    width: 80px;
+    border-radius: 10px;
+    color: white;
+}
+
+.container-imagenes{
+    width: 200%;
+    transition: all .5s ease;
+    margin: 8px ;
+    display: flex;
+}
+.container-imagenes img{
+    width: calc(100% / 4 - 24px);
+    border-radius: 20px;
+    margin: 0 8px;
+}
+.container-buttons button{    
+    font-size: 2.8rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.container-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 12px;
+}
+
+#pageMovie{
+    background: rgba(1, 12, 97, 0.163);
+    position: relative;
+}
+.background{
+    width: 100%;
+}
+.containerInfo{
+    position: absolute;
+    top: 350px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 16px;
+
+}
+.containerInfoTop{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.containerInfoTop h3{
+    margin: 12px;
+}
+.containerInfo p{
+    margin: 12px;
+}
+.tiposCategorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.peliculasSimilares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.peliculasSimilares img{
+    width: 140px;
+    margin: 8px;
+}
+
+
+/* footer*/
+footer{
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px;
+    color: rgb(5, 0, 0);
+    background: gainsboro;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+footer .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+footer #buttons-footer{
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+#buttons-footer a{
+    text-decoration: none;
+    font-size: 3.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 51, 51);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+#buttons-footer a:hover{
+    transform: scale(1.2);
+}
+
+.inactive{
+    display: none;
+}
+
+.ordenar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        max-width: 1000px;
+    }
+    #showcarrusel{
+        max-width: 400px;
+        max-height: 600px;
+    }
+    .img{
+        max-width: 400px;
+        max-height: 500px;
+    }
+    #tendenciasMovies{
+        max-width: 1200px;
+    }
+    #tendenciasTv{
+        max-width: 1200px;
+    }
+    .bars{
+        display: none;
+    }
+    .back{
+        left:-500px;
+    }
+    #lista-categorias{
+        max-width: 1000px;
+    }
+    #pageMovie{
+        width: 1000px;
+    }
+    .containerInfo{
+        position: relative;
+        top: -50px;
+    }
+
+    .background{
+        position: relative;
+        left: 25%;
+        width: 500px;
+        height: 800px;
+        object-fit: cover;
+        margin: auto;
+    }
+
+    footer{
+        position: relative;
+        bottom: 0;
+    }
+}
