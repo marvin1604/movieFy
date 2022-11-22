@@ -8,6 +8,7 @@ html{
     font-family: 'Red Hat Display', sans-serif;
     font-size: 62.5%;
     margin: 4px;
+    text-decoration: none;
 }
 body{
     /*ocultamos otod lo que sobre sale en el eje x*/
@@ -16,16 +17,32 @@ body{
     box-sizing: border-box;
 }
 h1{
-    /* font-size:3.8rem; */
+    font-size:3.8rem;
+    color: white;
 }
 h2{
     font-size: 2.4rem;
+    color: white;
+    margin: 8px;
 }
 h3{
     font-size: 1.8rem;
 }
 p{
     font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background: rgb(8, 240, 151);
+    margin: 6px;
+    padding: 8px 4px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
 }
 header{
     position: relative;
@@ -164,20 +181,15 @@ header{
     border-radius: 12px;
     font-weight: bold;
     margin: 8px;
+    color: rgb(5, 71, 46);
 }
 .lista .mas-categories{
-    width: 120px;
+    width: 130px;
     background: rgb(249, 182, 10);
     text-transform: capitalize;
     color: white;
 }
 
-/* #categorias{
-    margin: 18px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} */
 
 #categorias button{
     background: rgb(8, 240, 151);
@@ -212,7 +224,7 @@ header{
 .container-imagenes{
     width: 200%;
     transition: all .5s ease;
-    margin: 12px ;
+    margin: 8px ;
     display: flex;
 }
 .container-imagenes img{
@@ -233,7 +245,7 @@ header{
 }
 
 #pageMovie{
-    background: purple;
+    background: rgba(1, 12, 97, 0.163);
     position: relative;
 }
 .background{
@@ -321,6 +333,14 @@ footer #buttons-footer{
     display: none;
 }
 
+.ordenar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 @media(min-width:600px){
     body{
         display: flex;
@@ -331,7 +351,48 @@ footer #buttons-footer{
     header{
         max-width: 1000px;
     }
+    #showcarrusel{
+        max-width: 400px;
+        max-height: 600px;
+    }
+    .img{
+        max-width: 400px;
+        max-height: 500px;
+    }
+    #tendenciasMovies{
+        max-width: 1200px;
+    }
+    #tendenciasTv{
+        max-width: 1200px;
+    }
     .bars{
         display: none;
+    }
+    .back{
+        left:-500px;
+    }
+    #lista-categorias{
+        max-width: 1000px;
+    }
+    #pageMovie{
+        width: 1000px;
+    }
+    .containerInfo{
+        position: relative;
+        top: -50px;
+    }
+
+    .background{
+        position: relative;
+        left: 25%;
+        width: 500px;
+        height: 800px;
+        object-fit: cover;
+        margin: auto;
+    }
+
+    footer{
+        position: relative;
+        bottom: 0;
     }
 }

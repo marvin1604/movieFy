@@ -25,7 +25,9 @@ const listaCategorias= document.querySelector("#lista-categorias");
 const listaCategories= document.querySelector(".lista");
 const mascategories = document.querySelector(".mas-categories")
 const categorias = document.querySelector("#categorias");
-
+const btnTv = document.querySelector("#btnTv");
+const btnMovie = document.querySelector("#btnMovie");
+// const btnSeries = document.querySelector("#btnSeries");
 
 /*tendencias Movie*/
 const tendenciasMovie = document.querySelector("#tendenciasMovie");
@@ -42,6 +44,12 @@ const mastendenciasTv = document.querySelector(".mastendenciasTv");
 /* pageMovie*/
 const pageMovie= document.querySelector("#pageMovie");
 const backgroud= document.querySelector(".background");
+const tituloMovie = document.querySelector(".tituloMovie");
+const average = document.querySelector(".average");
+const descripcion = document.querySelector(".descripcion");
+const tiposCategorias = document.querySelector(".tiposCategorias");
+const peliculasSimilares = document.querySelector(".peliculasSimilares");
+
 
 /* pageTrends*/
 const pageTrends= document.querySelector("#pageTrends");
@@ -50,4 +58,4 @@ const pageTrends= document.querySelector("#pageTrends");
 const pageCategory= document.querySelector("#category");
 
 /* pageSearch*/
-// const pageSearch= document.querySelector("#pageMovie");
+const pageSearch= document.querySelector("#searchPage");

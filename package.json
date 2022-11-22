@@ -4,7 +4,7 @@
   "description": "Plataforma de peliculas donde trabajamos en el curso practico de api rest con javascript",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/marvin1604/movieFy#readme",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

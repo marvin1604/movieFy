@@ -14,8 +14,11 @@
 <body>
     <header id="header">
         <button class="back inactive"><i class="fa-solid fa-arrow-left"></i></button>
-        <h1 id="title">MovieFy</h1>
-        <button class="bars"><i class="fa-solid fa-bars"></i></button>
+        <a href="#">
+            <h1 id="title">MovieFy</h1>
+        </a>
+        
+        <!-- <button class="bars"><i class="fa-solid fa-bars"></i></button> -->
     </header>
     
     <section id="showcarrusel">
@@ -36,9 +39,9 @@
         </div>
     </section>
     <section id="lista-categorias" class="lista">        
-        <button>TvShows</button>
-        <button>Movies</button>
-        <button>Series </button>
+        <button id="btnTv">TvShows</button>
+        <button id="btnMovie">Movies</button>
+        <!-- <button id="btnSeries">Series </button> -->
         <button class="mas-categories">más categorias <i class="fa-solid fa-angle-down"></i></button>
         <div id="categorias" class="inactive"></div>
     </section>
@@ -82,29 +85,26 @@
         <img src="" alt="" class="background">
         <div class="containerInfo">            
             <div class="containerInfoTop">
-                <h3>Deadpool</h3>
-                <p>7.6</p>
+                <h3 class="tituloMovie">Deadpool</h3>
+                <p class="average">7.6</p>
             </div>
-            <p>LA mejor peliculas de accion blabla bla</p>
+            <p class="descripcion">LA mejor peliculas de accion blabla bla</p>
             <div class="tiposCategorias">
-                <p>Romance</p>
-                <p>accion</p>
             </div>
             <div class="peliculasSimilares">
-                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt="">
-                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt="">
-                <img src="https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg" alt=""> 
+                
             </div>
         </div>
     </section>
 
-
     <section id="category">
-        <h2>titulo Category</h2>
-        <div class="container-imagenes">
-            
-        </div>
+        
+    </section>
 
+    <section id="searchPage">
+        <h2>titulo Search</h2>
+        <div class="container-imagenes">
+        </div>
     </section>
 
 

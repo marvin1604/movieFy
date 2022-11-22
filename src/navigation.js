@@ -1,14 +1,39 @@
-console.log("navegando");
-
+// console.log("navegando");
+let vista
+let busqueda
+/* Llamando a Page Movies*/
 mastendencias.addEventListener("click", ()=> {
+    vista = "movie";
     location.hash = "#trends";
 })
-mastendenciasTv.addEventListener("click", ()=> {
+btnMovie.addEventListener("click", ()=> {
+    vista = "movie";
     location.hash = "#trends";
 })
 
+/* Llamando a Page tv*/
+
+mastendenciasTv.addEventListener("click", ()=> {
+    vista = "tv";
+    location.hash = "#trends";
+})
+
+btnTv.addEventListener("click", ()=> {
+    location.hash = "#trends";
+    vista = "tv"
+})
+
+/* pagina buscar*/
+buttonSearch.addEventListener("click", ()=> {
+    busqueda = inputText.value;
+    location.hash =`#search=${busqueda}`;
+    inputText.value="";
+})
+
+/*boton retroceder a Home*/
 back.addEventListener("click", ()=> {
-    location.hash = "#home";
+    history.back();
+    // location.hash = "#home";
 })
 
 
@@ -16,11 +41,11 @@ window.addEventListener("load", navigation, false);
 window.addEventListener("hashchange", navigation, false);
 
 function navigation(){
-    console.log({location});
+    // console.log({location});
     if(location.hash.startsWith('#trends')){
         trend();
     }else if(location.hash.startsWith('#search=')){
-        console.log("search");
+        searchView();
     }else if(location.hash.startsWith('#movie=')){
         movie();
     }else if(location.hash.startsWith('#category=')){
@@ -28,9 +53,9 @@ function navigation(){
     }else{
         homePage();
     }
-    location.hash
+    window.scrollTo({ top: 0 });
 }
-navigation();
+// navigation();
 
 function homePage(){
     console.log('Home');
@@ -44,15 +69,15 @@ function homePage(){
     pageCategory.classList.add("inactive");
     pageTrends.classList.add("inactive");
     back.classList.add("inactive")
+    pageSearch.classList.add("inactive")
     getTendenciaMoviesPreview();
     getTendencyCarruselPreview();
     getCategory();
     getTendenciaTvPreview()
 }
 
-function trend(){    
+function trend(){
     console.log("trends");
-    bars.classList.add("inactive");
     back.classList.remove("inactive");
     showCarrusel.classList.add("inactive");
     search.classList.add("inactive");
@@ -61,13 +86,13 @@ function trend(){
     tendenciasTv.classList.add("inactive");
     pageCategory.classList.add("inactive");
     pageMovie.classList.add("inactive");
-    pageTrends.classList.remove("inactive")
-
+    pageTrends.classList.remove("inactive");
+    pageSearch.classList.add("inactive");
+    moviesShow(vista);
 }
 
 function category(){
     console.log("Category");
-    bars.classList.add("inactive");
     back.classList.remove("inactive");
     showCarrusel.classList.add("inactive");
     search.classList.add("inactive");
@@ -77,13 +102,12 @@ function category(){
     pageMovie.classList.add("inactive");
     pageCategory.classList.remove("inactive");
     pageTrends.classList.add("inactive");
+    pageSearch.classList.add("inactive");
 }
 
 function movie(){
     console.log("Movie");
-    backgroud.setAttribute("src", "https://es.web.img2.acsta.net/pictures/16/01/12/13/40/312222.jpg");
     pageMovie.classList.remove("inactive");
-    bars.classList.add("inactive");
     back.classList.remove("inactive");
     showCarrusel.classList.add("inactive");
     search.classList.add("inactive");
@@ -92,5 +116,22 @@ function movie(){
     tendenciasTv.classList.add("inactive");
     pageCategory.classList.add("inactive");
     pageTrends.classList.add("inactive");
+    pageSearch.classList.add("inactive");
 }
 
+function searchView(){
+    console.log("search");
+    bars.classList.add("inactive");
+    back.classList.remove("inactive");
+    showCarrusel.classList.add("inactive");
+    search.classList.remove("inactive");
+    listaCategorias.classList.add("inactive");
+    tendenciasMovies.classList.add("inactive");
+    tendenciasTv.classList.add("inactive");
+    pageMovie.classList.add("inactive");
+    pageCategory.classList.add("inactive");
+    pageTrends.classList.add("inactive");
+    pageCategory.classList.add("inactive");
+    pageSearch.classList.remove("inactive")
+    getMovieBySearch(busqueda);
+}
