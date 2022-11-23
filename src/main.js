@@ -60,7 +60,8 @@ async function getTendencyCarruselPreview(){
     const res = await fetch(`${baseURL}/trending/movie/week?api_key=` + API_KEY)
     const data = await res.json();
     const movies = data.results;
-    for(let item =0;  item< 3; item++){
+    grande.innerHTML="";
+    for(let item =5;  item< 10; item++){
         // console.log(movies[item].poster_path)
         const imagen = document.createElement("img");
         imagen.className= "img"
@@ -157,59 +158,15 @@ function desactivarCategories(){
 }
 
 //carrusel inicio
-punto.forEach((cadapunto, i) =>{
-    punto[i].addEventListener("click", () =>{
-        let posicion = i;
-        let operacion = (posicion * -25)+38;
+// punto.forEach((cadapunto, i) =>{
+//     punto[i].addEventListener("click", () =>{
+//         let posicion = i;
+//         let operacion = (posicion * -25)+38;
 
-        grande.style.transform = `translateX(${operacion}%)`
-        punto.forEach((cadapunto, i) =>{
-            punto[i].classList.remove("activo");
-        })
-        punto[i].classList.add("activo");
-    })
-})
-
-//carrusel tendencias Movies
-siguiente.addEventListener("click", showDerecha);
-var inicioMovies = 0;
-function showDerecha(){
-    inicioMovies = ((inicioMovies -50));
-    if (inicioMovies > -250){
-        containerImagenes.style.transform = `translateX(${inicioMovies}%)`
-    }else{
-        inicioMovies=-250;
-    }
-}
-
-anterior.addEventListener("click", showIzquierda);
-function showIzquierda(){
-    inicioMovies = ((inicioMovies +50));
-    if(inicioMovies <= 0){
-        containerImagenes.style.transform = `translateX(${inicioMovies}%)`
-    }else{
-        inicioMovies=0;
-    }
-}
-
-/*carrusel tendencias Tv*/
-siguienteTv.addEventListener("click", showDerechaTv);
-var inicio = 0;
-function showDerechaTv(){
-    console.log("derecha");
-    inicio = ((inicio -50));
-    if (inicio > -250){
-        containerImagenesTv.style.transform = `translateX(${inicio}%)`
-    }else{
-        inicio=-250;
-    }
-}
-anteriorTv.addEventListener("click", showIzquierdaTv);
-function showIzquierdaTv(){
-    inicio = ((inicio +50));
-    if(inicio <= 0){
-        containerImagenesTv.style.transform = `translateX(${inicio}%)`
-    }else{
-        inicio=0;
-    }
-}
+//         grande.style.transform = `translateX(${operacion}%)`
+//         punto.forEach((cadapunto, i) =>{
+//             punto[i].classList.remove("activo");
+//         })
+//         punto[i].classList.add("activo");
+//     })
+// })

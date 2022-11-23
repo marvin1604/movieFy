@@ -82,34 +82,22 @@ header{
     /* max-width: 1000px; */
     margin-top: 20px;
     width: 100%;
-    max-width: 120rem;
-    overflow-x: hidden ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
-.carrusel .grande{
-    width: 300%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    transition: all .5s ease;
-    transform: translateX(10%);
+.grande{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 300px;
+    padding-left: 14px;
+    padding-bottom: 16px;
 }
-.carrusel .img{
-    width: calc(100% / 4 - 1rem);
-    max-width: 400px;
-    margin: 1rem;
-    background-color: green;
-    height: 50vh;
+.grande .img{
+    width: 200px;
+    height: 300px;
     border-radius: 20px;
-    filter: brightness(70%);
+    margin: 4px;
 }
-.carrusel .puntos{
+/* .carrusel .puntos{
     position: absolute;
     bottom: 20px;
     width: 100%;
@@ -134,7 +122,7 @@ header{
 
 .carrusel .punto.activo{
     background-color: orange;
-}
+} */
 
 /*search*/
 .search{
@@ -146,18 +134,20 @@ header{
 }
 .input-text{
     width: 250px;
-    height: 30px;
+    height: 40px;
     margin-top: 12px;
     border-radius:10px 0 0 10px;
     border: none;
     padding: 8px;
     background-color: rgb(9, 12, 90);
     color: white;
+    font-size: 1.8rem;
 }
 .search button{
     margin-top: 12px;
+    margin-left: 0;
     width: 40px;
-    height: 30px;
+    height: 40px;
     border-radius:0 10px 10px 0;
     border: none;
     color: white;
@@ -202,8 +192,7 @@ header{
 
 /* carrusel tendencia*/
 .tendencias{
-    /* max-width: 1200px; */
-    margin-top: 18px;
+    margin-top: 10px;
     overflow-x: hidden;
 }
 .tendencias .titulo{
@@ -221,27 +210,20 @@ header{
     color: white;
 }
 
+
 .container-imagenes{
-    width: 200%;
-    transition: all .5s ease;
-    margin: 8px ;
-    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 300px;
+    padding-left: 14px;
+    padding-bottom: 16px;
 }
 .container-imagenes img{
-    width: calc(100% / 4 - 24px);
+    width: 200px;
+    height: 300px;
     border-radius: 20px;
-    margin: 0 8px;
-}
-.container-buttons button{    
-    font-size: 2.8rem;
-    background-color: transparent;
-    border: none;
-    color: white;
-}
-.container-buttons{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 12px;
+    margin: 4px;
 }
 
 #pageMovie{
@@ -253,7 +235,7 @@ header{
 }
 .containerInfo{
     position: absolute;
-    top: 350px;
+    top: 500px;
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -342,6 +324,22 @@ footer #buttons-footer{
     max-width: 1000px;
 }
 
+/*carrusel*/
+
+/* .container-imagenes2{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 300px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+}
+.container-imagenes2 img{
+    width: 200px;
+    height: 300px;
+} */
+
+
 @media(min-width:600px){
     body{
         display: flex;
@@ -351,20 +349,39 @@ footer #buttons-footer{
     }
     header{
         max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    #showcarrusel{
-        max-width: 400px;
+    /* #showcarrusel{
+        width: 100%;
+        max-width: 1050px;
         max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
+    .grande{
+        width: 100%;
+        /* display: flex;
+        justify-content: center; */
+    }
+    .grande::-webkit-scrollbar{
+        width: 5px;
+        height: 14px;
+        background-color: rgb(6, 51, 51);
     }
     .img{
         max-width: 400px;
         max-height: 500px;
     }
     #tendenciasMovies{
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1400px;
     }
     #tendenciasTv{
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1400px;
     }
     .bars{
         display: none;
@@ -375,6 +392,17 @@ footer #buttons-footer{
     #lista-categorias{
         max-width: 1000px;
     }
+
+    .container-imagenes{
+        width: 100%;
+    }
+    .container-imagenes::-webkit-scrollbar{
+        width: 5px;
+        height: 14px;
+        background-color: rgb(6, 51, 51);
+    }
+
+
     #pageMovie{
         width: 1000px;
     }

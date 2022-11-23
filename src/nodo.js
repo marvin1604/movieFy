@@ -12,7 +12,6 @@ const bars = document.querySelector(".bars");
 /*carusel-pricnipal*/
 const showCarrusel = document.querySelector("#showcarrusel");
 const grande = document.querySelector(".grande");
-const punto = document.querySelectorAll(".punto");
 
 /* search */
 const search = document.querySelector("#search");
@@ -32,13 +31,9 @@ const btnMovie = document.querySelector("#btnMovie");
 /*tendencias Movie*/
 const tendenciasMovie = document.querySelector("#tendenciasMovie");
 const containerImagenes = document.querySelector(".container-imagenes");
-const anterior = document.querySelector(".anterior")
-const siguiente = document.querySelector(".siguiente");
 const mastendencias = document.querySelector(".mastendencias");
 /*tendencias tv*/
 const tendenciasTv = document.querySelector("#tendenciasTv");
-const anteriorTv = document.querySelector(".anterior-tv")
-const siguienteTv = document.querySelector(".siguiente-tv");
 const containerImagenesTv = document.querySelector(".container-imagenes-tv");
 const mastendenciasTv = document.querySelector(".mastendenciasTv");
 /* pageMovie*/

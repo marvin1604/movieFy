@@ -103,6 +103,11 @@ function category(){
     pageCategory.classList.remove("inactive");
     pageTrends.classList.add("inactive");
     pageSearch.classList.add("inactive");
+    const [_, categoryData] = location.hash.split("=");
+    const [categoriaID,nameCategoria] = categoryData.split("-")
+    console.log(categoriaID);
+    getMoviesByCategory(categoriaID,nameCategoria);
+
 }
 
 function movie(){
@@ -117,11 +122,13 @@ function movie(){
     pageCategory.classList.add("inactive");
     pageTrends.classList.add("inactive");
     pageSearch.classList.add("inactive");
+
+    const [_,id]=location.hash.split('=');
+    getMovieId(id);
 }
 
 function searchView(){
     console.log("search");
-    bars.classList.add("inactive");
     back.classList.remove("inactive");
     showCarrusel.classList.add("inactive");
     search.classList.remove("inactive");
